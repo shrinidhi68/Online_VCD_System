@@ -16,7 +16,7 @@ export default function Home() {
   };
   return (
     <div>
-      <Header />
+     
       <center>
         <h1 style={{ color: "green" }}>Welcome to Online Vcd System</h1>
       </center>

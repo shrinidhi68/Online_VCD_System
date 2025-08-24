@@ -39,7 +39,7 @@ function App() {
   } else {
     return (
       <>
-        <Header />
+        {/* <Header /> */}
         <Container>
           <h1 style={{ textAlign: "center" }}>ADMIN LOGIN</h1>
           <Row className="justify-content-center">

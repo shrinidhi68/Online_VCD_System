@@ -22,15 +22,18 @@ import ViewCart from "./components/ViewCart";
 import ModifyCart from "./components/ModifyCart";
 import ConfirmOrder from "./components/ConfirmOrder";
 import OrderHistory from "./components/OrderHistory";
+import Header from "./components/Header";
 
 export default function Rout() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<App />} />
-        <Route path="home" element={<Home />} />
+        <Route path="/" element={<Header />} >
+        <Route index element={<Home />} />
         <Route path="login" element={<UserLogin />} />
         <Route path="admin" element={<AdminLogin />} />
+        <Route path="userRegister" element={<UserRegister />} />
+        </Route>
         <Route path="adminHome" element={<AdminHome />} />
         <Route path="userhome" element={<UserHome />} />
         <Route path="addStore" element={<AddVcdStore />} />
@@ -45,7 +48,7 @@ export default function Rout() {
         <Route path="modifyCart/:id" element={<ModifyCart />} />
         <Route path="confirmOrder" element={<ConfirmOrder />} />
         <Route path="/orderHistory" element={<OrderHistory />} />
-        <Route path="userRegister" element={<UserRegister />} />
+        
       </Routes>
     </BrowserRouter>
   );

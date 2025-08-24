@@ -72,7 +72,7 @@ function App() {
   } else {
     return (
       <>
-        <Header />
+        {/* <Header /> */}
         <center>
           <div>
             <h2>USER REGISTRATION</h2>
