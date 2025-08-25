@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UserLogin from "./components/UserLogin";
@@ -23,31 +22,37 @@ import ModifyCart from "./components/ModifyCart";
 import ConfirmOrder from "./components/ConfirmOrder";
 import OrderHistory from "./components/OrderHistory";
 import Header from "./components/Header";
+import UserHeader from "./components/UserHeader";
 
 export default function Rout() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Header />} >
-        <Route index element={<Home />} />
-        <Route path="login" element={<UserLogin />} />
-        <Route path="admin" element={<AdminLogin />} />
-        <Route path="userRegister" element={<UserRegister />} />
+          <Route index element={<Home />} />
+          <Route path="login" element={<UserLogin />} />
+          <Route path="admin" element={<AdminLogin />} />
+          <Route path="userRegister" element={<UserRegister />} />
+        </Route>
+        <Route path="userHeader" element={<UserHeader/>}>
+          <Route index  element={<UserHome />} />
+          <Route path="searchVcdStore" element={<SearchVcdStore />} />
+          <Route path="searchVcd" element={<SearchVcd />} />
+          <Route path="orderHistory" element={<OrderHistory />} />
+          <Route path="viewCart" element={<ViewCart />} />
         </Route>
         <Route path="adminHome" element={<AdminHome />} />
-        <Route path="userhome" element={<UserHome />} />
+        
         <Route path="addStore" element={<AddVcdStore />} />
         <Route path="displayVcdStore" element={<DisplayVcdStore />} />
         <Route path="vcdDetails" element={<DisplayVcdDetails />} />
         <Route path="addVcd" element={<AddVcd />} />
         <Route path="modifyPage/:id" element={<ModifyVcdStore />} />
         <Route path="modifyVcdPage/:id" element={<ModifyVcdDetails />} />
-        <Route path="searchVcdStore" element={<SearchVcdStore />} />
-        <Route path="searchVcd" element={<SearchVcd />} />
-        <Route path="viewCart" element={<ViewCart />} />
+     
         <Route path="modifyCart/:id" element={<ModifyCart />} />
         <Route path="confirmOrder" element={<ConfirmOrder />} />
-        <Route path="/orderHistory" element={<OrderHistory />} />
+        
         
       </Routes>
     </BrowserRouter>

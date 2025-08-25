@@ -31,7 +31,7 @@ function App() {
   } else {
     return (
       <div>
-        <UserHeader />
+        
         <center>
           <h1 style={{ color: "green" }}>
             Search VcdStore by place (e.g., city, state)

@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import UserService from "./UserService";
-import { Navigate } from "react-router-dom";
+import { Navigate,Outlet,Link } from "react-router-dom";
 
 export default function Header() {
   const [redirect, setRedirect] = useState(false);
@@ -25,15 +25,16 @@ export default function Header() {
     return <Navigate replace to="/login" />;
   } else {
     return (
+      <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand>ONLINE VCD SYSTEM</Navbar.Brand>
           <Nav className="d-flex">
-            <Nav.Link href="/userhome">Home</Nav.Link>
-            <Nav.Link href="/searchVcdStore">Search VcdStore</Nav.Link>
-            <Nav.Link href="/searchVcd">Search Vcds</Nav.Link>
-            <Nav.Link href="/viewCart">Cart</Nav.Link>
-            <Nav.Link href="/orderHistory">Order History</Nav.Link>
+            <Nav.Link><Link to="/userHeader">Home</Link></Nav.Link>
+            <Nav.Link><Link to="/userHeader/searchVcdStore">Search VcdStore</Link></Nav.Link>
+            <Nav.Link> <Link to="/userHeader/searchVcd">Search Vcds</Link></Nav.Link>
+            <Nav.Link ><Link to="/userHeader/viewCart">Cart</Link></Nav.Link>
+            <Nav.Link ><Link to="/userHeader/orderHistory">Order History</Link></Nav.Link>
             <Form className="d-flex" onSubmit={handlerSubmit}>
               <Button variant="outline-danger" type="submit">
                 Logout
@@ -42,6 +43,10 @@ export default function Header() {
           </Nav>
         </Container>
       </Navbar>
+     <main>
+      <Outlet/>
+     </main>
+     </>
     );
   }
 }

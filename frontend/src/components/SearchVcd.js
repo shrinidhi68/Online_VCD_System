@@ -79,7 +79,7 @@ function App() {
     } else {
       return (
         <div>
-          <UserHeader />
+         
           <center>
             <h1 style={{ color: "green" }}>
               Search VcdDetails by (e.g., category, ratings,name,language)
@@ -149,7 +149,8 @@ function App() {
         </div>
       );
     }
-  } else {
+  } 
+  else {
     return <Navigate replace to="/login"></Navigate>;
   }
 }

@@ -7,7 +7,7 @@ function App() {
   } else {
     return (
       <div>
-        <UserHeader />
+       
         <center>
           <h1 style={{ color: "green" }}>
             Welcome to Online Vcd System Login Page

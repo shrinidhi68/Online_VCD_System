@@ -40,7 +40,7 @@ function App() {
   if (localStorage.getItem("id") !== null) {
     return (
       <>
-        <UserHeader />
+        
         {data.length === 0 && (
           <center>
             <h1 style={{ color: "blue" }}>No Cart Items</h1>

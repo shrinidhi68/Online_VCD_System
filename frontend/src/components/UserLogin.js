@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import UserService from "./UserService";
 import { Navigate } from "react-router-dom";
-import Header from "./Header";
 
 function App() {
   const [user, setUser] = useState({
@@ -36,7 +35,7 @@ function App() {
       });
   };
   if (redirect) {
-    return <Navigate replace to="/userhome" />;
+    return <Navigate replace to="/userHeader" />;
   } else {
     return (
       <>

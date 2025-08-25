@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import {Outlet, Link } from "react-router-dom";
 
 export default function Header() {
+    
   return (
     <>
     <Navbar bg="dark" data-bs-theme="dark">
@@ -19,7 +20,7 @@ export default function Header() {
       </Container>
     </Navbar>
     <main>
-    <Outlet />
+       <Outlet />
     </main>
     
     </>
